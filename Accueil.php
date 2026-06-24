@@ -98,13 +98,13 @@ if(isset($POST['supp_session']))
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav dropdown menu">
-                  <li class="nav-item"><a class=" text-light"  href="#Accueil">Accueil</a></li>
-                  <li class="nav-item"><a class=" text-light"  href="#Produits">Produits</a></li>
-                  <li class="nav-item"><a class=" text-light"  href="#Panier">Panier</a></li>
-                  <li class="nav-item"><a class=" text-light"  href="#Contact">Contact</a></li>
-              </ul>
-          </div>
+                    <ul class="navbar-nav dropdown menu">
+                        <li class="nav-item"><a class=" text-light"  href="#Accueil">Accueil</a></li>
+                        <li class="nav-item"><a class=" text-light"  href="#Produits">Produits</a></li>
+                        <li class="nav-item"><a class=" text-light"  href="#Panier">Panier</a></li>
+                        <li class="nav-item"><a class=" text-light"  href="#Contact">Contact</a></li>
+                    </ul>
+                </div>
       </div>
     </nav>
 
@@ -129,7 +129,7 @@ if(isset($POST['supp_session']))
                         <span>Produits</span>
                         <h2>CATEGORIES</h2>
                     </div>  
-                        <h2 class="text-center bg-success text-light">Calmant</h2>
+                    <h2 class="text-center bg-success text-light">Calmant</h2>
                         <div class="terrain">  
                             <?php foreach($tabca as $ca) { ?>
                             <div class="trade">
@@ -144,20 +144,17 @@ if(isset($POST['supp_session']))
                                             <?php echo ($ca->Prix."Ar");?>
                                         </strong>
                                     </p>
-                                      <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
-
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
-                                </div>
-                            </a>    
+                                    <form method="POST">
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>   
                             <?php } ?>
                         </div>
                             
-                            <h2 class="text-center bg-success text-light">Fortifiant</h2>
-                            <div class="terrain">  
+                    <h2 class="text-center bg-success text-light">Fortifiant</h2>
+                        <div class="terrain">  
                             <?php foreach($tabf as $f) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($f->img);?>" alt="">
@@ -172,19 +169,16 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
-
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
-                                </div>
-                            </a>    
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>  
                             <?php } ?>
                         </div>
                            
-                            <h2 class="text-center bg-success text-light">Creme</h2>
-                            <div class="terrain">  
+                    <h2 class="text-center bg-success text-light">Creme</h2>
+                        <div class="terrain">  
                             <?php foreach($tabcr as $cr) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($cr->img);?>" alt="">
@@ -199,19 +193,16 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
-
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
-                                </div>
-                            </a>    
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>    
                             <?php } ?>
                         </div> 
 
-                        <h2 class="text-center bg-success text-light">Sirop</h2>
-                            <div class="terrain">  
+                    <h2 class="text-center bg-success text-light">Sirop</h2>
+                        <div class="terrain">  
                             <?php foreach($tabs as $s) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($s->img);?>" alt="">
@@ -226,17 +217,14 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
-
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
-                                </div>
-                            </a>    
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>   
                             <?php } ?>
                         </div>
-            <br>
+                    <br>
                 <div class="d-md-flex justify-content-md-end">
                     <a href="Detail.php">En Savoir plus >></a> 
                 </div>        
@@ -250,63 +238,60 @@ if(isset($POST['supp_session']))
                         <h2>Recu du client</h2>
                     </div> 
         </div>
-        <table class="table">
-      <thead>
-        <tr class="table-light">
-          <th scope="col" class="text-success">Designation</th>
-          <th scope="col" class="text-success">Quantite</th>
-          <th scope="col" class="text-success">Prix Unitaire</th>
-          <th scope="col" class="text-success">Prix Total</th>
-          <th scope="col" class="text-success">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <?php
-        $total=0;
-         foreach(($_SESSION["Pharmacie"] ?? []) as $Pharmacie=>$ph) {  $total+=(float)$ph["PT"] ;   ?>
-            <tr>
-            <th scope="row" class="table-light"><?php echo $ph["nom"] ?></th>
-            <td class="table-light"><?php echo $ph["quantite"]?></td>
-            <td class="table-light"><?php echo $ph["prix"] ?></td>
-            <td class="table-light"><?php echo $ph["PT"] ?></td>
-            <td class="table-light"><a href="?remove=<?php echo $Pharmacie;?>"><button type="button" class="btn btn-outline-danger ">Supprimer</button></td>
+    <table class="table">
+        <thead>
+            <tr class="table-light">
+            <th scope="col" class="text-success">Designation</th>
+            <th scope="col" class="text-success">Quantite</th>
+            <th scope="col" class="text-success">Prix Unitaire</th>
+            <th scope="col" class="text-success">Prix Total</th>
+            <th scope="col" class="text-success">Action</th>
             </tr>
-        <?php }?>
-             <tr>
-            <th scope="row" class="table-light"></th>
-            <td class="table-light"></td>
-            <td class="table-light text-success"><strong>Net=</strong> </td>
-            <td class="table-light"><?php echo $total?></td>
-             <td class="table-light"></td>
-            </tr>
-       </tbody>
+        </thead>
+        <tbody>
+            <?php
+            $total=0;
+            foreach(($_SESSION["Pharmacie"] ?? []) as $Pharmacie=>$ph) {  $total+=(float)$ph["PT"] ;   ?>
+                <tr>
+                <th scope="row" class="table-light"><?php echo $ph["nom"] ?></th>
+                <td class="table-light"><?php echo $ph["quantite"]?></td>
+                <td class="table-light"><?php echo $ph["prix"] ?></td>
+                <td class="table-light"><?php echo $ph["PT"] ?></td>
+                <td class="table-light"><a href="?remove=<?php echo $Pharmacie;?>"><button type="button" class="btn btn-outline-danger ">Supprimer</button></td>
+                </tr>
+            <?php }?>
+                <tr>
+                <th scope="row" class="table-light"></th>
+                <td class="table-light"></td>
+                <td class="table-light text-success"><strong>Net=</strong> </td>
+                <td class="table-light"><?php echo $total?></td>
+                <td class="table-light"></td>
+                </tr>
+        </tbody>
     </table>
         <div class="d-md-flex justify-content-md-end">
-<button type="button" class="btn btn-outline-success" id="btnConfirmer" onclick=redirectionLogin()>Confirmer</button>
+            <button type="button" class="btn btn-outline-success" id="btnConfirmer" onclick=redirectionLogin()>Confirmer</button>
 
-<script>
-    const bouton = document.getElementById('btnConfirmer');
-   bouton.addEventListener('click',()=>
-    {
-        let reponse = confirm("Voulez-vous vraiment confirmer cet achat ?");
-        if(reponse == true)
-        {
-            window.location.href="login.php";
-            formSupprimer.submit();
-        }
-        if(reponse == false)
-        {
-            alert("Achat annule.")
-        }
-    });
-</script>
+                <script>
+                    const bouton = document.getElementById('btnConfirmer');
+                bouton.addEventListener('click',()=>
+                    {
+                        let reponse = confirm("Voulez-vous vraiment confirmer cet achat ?");
+                        if(reponse == true)
+                        {
+                            window.location.href="login.php";
+                            formSupprimer.submit();
+                        }
+                        if(reponse == false)
+                        {
+                            alert("Achat annule.")
+                        }
+                    });
+                </script>
 
-<form action="#Panier" method="POST">
-    <button type="submit" name="supp_session" class=" btn-delete btn btn-outline-danger ">
-        Supprimer 
-    </button>
-
-</div>
+            <form action="#Panier" method="POST">
+            <button type="submit" name="supp_session" class=" btn-delete btn btn-outline-danger ">Supprimer</button>
+        </div>
     </section>
 
      <section id="video-container">
@@ -335,23 +320,28 @@ if(isset($POST['supp_session']))
                   <div class="section-heading">
                       <h2>Adresse : N2 - Arabe Lénine, Ankadifotsy, Antananarivo</h2>
                       <h2>Téléphones : 020 22 222 07 ou 034 22 222 07 (autres contacts disponibles : 033 85 991 20 / 032 24 705 51)</h2>
-    </section>    
+                </div>    
+            </div>
+        </div>
+    </section> 
+
     <br>
     <br>
+
     <nav class="navbar navbar-expand-lg bg-body-primary dropdown cf"   id="primary-nav" >
       <div class="container-fluid bg-success text-light">
             <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">Pharmacie
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav dropdown menu">
                     <li class="nav-item">Nathan Iothy Ramakavelo</li>
                   <li class="nav-item">Antananarivo</li>
-              </ul>
-          </div>
+                </ul>
+            </div>
       </div>
-</nav>
+    </nav>
 
 </body>
 </html>

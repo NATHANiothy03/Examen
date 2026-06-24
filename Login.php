@@ -3,26 +3,27 @@ $pseudo="Client";
 $mdp="Client123";
 
 if(!isset($_POST["nom"]) && !isset($_POST["mot"]))
-   $reponse=""; {
+   $reponse=""; 
+    {
         $reponse="Veuillez insert vos donnees";
     }
 if(isset ($_POST["nom"]) && isset ($_POST["mot"]))
     {
-                if($pseudo==$_POST["nom"])
-                    {
-                        $reponse="";
-                        if($_POST["mot"]==$mdp)
-                            {
-                                echo"<script>alert('Achat Reussi.Merci pour votre Confiance');</script>";
-                                $reponse="Mot de passe correct!";
-                               echo"<script>window.location.href ='Accueil.php';</script>";
-                            }
-                        else
-                            {
-                                echo"<script>alert('Mot de Passe incorrecte');</script>";
-                                $reponse="Mot de passe incorrecte!";
-                            }
-                    }    
+        if($pseudo==$_POST["nom"])
+            {
+                $reponse="";
+                    if($_POST["mot"]==$mdp)
+                        {
+                            echo"<script>alert('Achat Reussi.Merci pour votre Confiance');</script>";
+                            $reponse="Mot de passe correct!";
+                            echo"<script>window.location.href ='Accueil.php';</script>";
+                        }
+                    else
+                        {
+                            echo"<script>alert('Mot de Passe incorrecte');</script>";
+                            $reponse="Mot de passe incorrecte!";
+                        }
+            }    
     }
 ?>
 <!DOCTYPE html>
@@ -42,31 +43,32 @@ if(isset ($_POST["nom"]) && isset ($_POST["mot"]))
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-          </div>
+              <div class="collapse navbar-collapse" id="navbarNav"></div>
       </div>
-</nav>
+    </nav>
 </div>  
 <br>
 <br>
 <br>
 <br>
     <form method="POST">
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-default">Pseudo</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="nom">
-</div>
+        <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-default">Pseudo</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="nom">
+        </div>
 
-<br>
+        <br>
 
-<div class="input-group input-group-lg">
-  <span class="input-group-text" id="inputGroup-sizing-default">Mdp</span>
-  <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="mot">
-</div>
-<br>
-<div class="d-md-flex justify-content-md-end">
-        <button type="submit" class="btn btn-success" >Envoyer</button>
-</div>        
+        <div class="input-group input-group-lg">
+        <span class="input-group-text" id="inputGroup-sizing-default">Mdp</span>
+        <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-lg" name="mot">
+        </div>
+
+        <br>
+
+        <div class="d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-success" >Envoyer</button>
+        </div>        
     </form>
     <p class="text-danger"><?php echo $reponse ?></p>
 </body>

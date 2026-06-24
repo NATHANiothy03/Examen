@@ -65,7 +65,7 @@ $tabs=[$s1,$s2,$s3];
 <table class="table">
     <h2 class="text-center bg-success text-light">Calmant</h2>
   <thead>
-        <?php foreach($tabca as $ca) { ?>
+    <?php foreach($tabca as $ca) { ?>
         <tr>
             <th scope="col">
                 <img class="rae"; src="<?php echo ($ca->img);?>" alt="">
@@ -83,8 +83,8 @@ $tabs=[$s1,$s2,$s3];
                     </strong>
                 </p>
             </th>
-            </tr>
-        <?php }?>
+        </tr>
+    <?php }?>
   </thead>
   </table>
 
@@ -92,8 +92,8 @@ $tabs=[$s1,$s2,$s3];
 <table class="table">
     <h2 class="text-center bg-success text-light">Fortifiant</h2>
   <thead>
-         <?php foreach($tabf as $f) { ?>
-         <tr>
+    <?php foreach($tabf as $f) { ?>
+        <tr>
             <th scope="col">
                 <img class="rae"; src="<?php echo ($f->img);?>" alt="">
             </th>
@@ -111,7 +111,7 @@ $tabs=[$s1,$s2,$s3];
                 </p>
             </th>
         </tr>
-        <?php }?>
+    <?php }?>
     </thead>
     </table>
 
@@ -166,18 +166,18 @@ $tabs=[$s1,$s2,$s3];
         <?php }?>
  </thead>
 </table>
- <br>
-    <br>
-    <nav class="navbar navbar-expand-lg bg-body-primary dropdown cf"   id="primary-nav" >
+<br>
+<br>
+<nav class="navbar navbar-expand-lg bg-body-primary dropdown cf"   id="primary-nav" >
       <div class="container-fluid bg-success text-light">
             <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">Pharmacie
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
+            <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav dropdown menu">
                     <li class="nav-item">Nathan Iothy Ramakavelo</li>
-                  <li class="nav-item">Antananarivo</li>
+                    <li class="nav-item">Antananarivo</li>
               </ul>
           </div>
       </div>
