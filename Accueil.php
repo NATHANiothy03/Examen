@@ -98,13 +98,13 @@ if(isset($POST['supp_session']))
                   <span class="navbar-toggler-icon"></span>
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav dropdown menu">
-                        <li class="nav-item"><a class=" text-light"  href="#Accueil">Accueil</a></li>
-                        <li class="nav-item"><a class=" text-light"  href="#Produits">Produits</a></li>
-                        <li class="nav-item"><a class=" text-light"  href="#Panier">Panier</a></li>
-                        <li class="nav-item"><a class=" text-light"  href="#Contact">Contact</a></li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav dropdown menu">
+                  <li class="nav-item"><a class=" text-light"  href="#Accueil">Accueil</a></li>
+                  <li class="nav-item"><a class=" text-light"  href="#Produits">Produits</a></li>
+                  <li class="nav-item"><a class=" text-light"  href="#Panier">Panier</a></li>
+                  <li class="nav-item"><a class=" text-light"  href="#Contact">Contact</a></li>
+              </ul>
+          </div>
       </div>
     </nav>
 
@@ -129,7 +129,7 @@ if(isset($POST['supp_session']))
                         <span>Produits</span>
                         <h2>CATEGORIES</h2>
                     </div>  
-                    <h2 class="text-center bg-success text-light">Calmant</h2>
+                        <h2 class="text-center bg-success text-light">Calmant</h2>
                         <div class="terrain">  
                             <?php foreach($tabca as $ca) { ?>
                             <div class="trade">
@@ -144,17 +144,20 @@ if(isset($POST['supp_session']))
                                             <?php echo ($ca->Prix."Ar");?>
                                         </strong>
                                     </p>
-                                    <form method="POST">
-                                        Quantite:<input type="number"  name="Pharmacie">
-                                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
-                                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
-                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                                    </form>   
+                                      <form method="POST">
+                        Quantite:<input type="number"  name="Pharmacie">
+                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
+                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
+
+                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                    </form>
+                                </div>
+                            </a>    
                             <?php } ?>
                         </div>
                             
-                    <h2 class="text-center bg-success text-light">Fortifiant</h2>
-                        <div class="terrain">  
+                            <h2 class="text-center bg-success text-light">Fortifiant</h2>
+                            <div class="terrain">  
                             <?php foreach($tabf as $f) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($f->img);?>" alt="">
@@ -169,16 +172,19 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                                        Quantite:<input type="number"  name="Pharmacie">
-                                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
-                                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
-                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                                    </form>  
+                        Quantite:<input type="number"  name="Pharmacie">
+                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
+                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
+
+                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                    </form>
+                                </div>
+                            </a>    
                             <?php } ?>
                         </div>
                            
-                    <h2 class="text-center bg-success text-light">Creme</h2>
-                        <div class="terrain">  
+                            <h2 class="text-center bg-success text-light">Creme</h2>
+                            <div class="terrain">  
                             <?php foreach($tabcr as $cr) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($cr->img);?>" alt="">
@@ -193,16 +199,19 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                                        Quantite:<input type="number"  name="Pharmacie">
-                                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
-                                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
-                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                                    </form>    
+                        Quantite:<input type="number"  name="Pharmacie">
+                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
+                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
+
+                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                    </form>
+                                </div>
+                            </a>    
                             <?php } ?>
                         </div> 
 
-                    <h2 class="text-center bg-success text-light">Sirop</h2>
-                        <div class="terrain">  
+                        <h2 class="text-center bg-success text-light">Sirop</h2>
+                            <div class="terrain">  
                             <?php foreach($tabs as $s) { ?>
                             <div class="trade">
                                 <img class="raer"; src="<?php echo ($s->img);?>" alt="">
@@ -217,14 +226,17 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                                        Quantite:<input type="number"  name="Pharmacie">
-                                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
-                                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
-                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                                    </form>   
+                        Quantite:<input type="number"  name="Pharmacie">
+                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
+                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
+
+                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                    </form>
+                                </div>
+                            </a>    
                             <?php } ?>
                         </div>
-                    <br>
+            <br>
                 <div class="d-md-flex justify-content-md-end">
                     <a href="Detail.php">En Savoir plus >></a> 
                 </div>        
@@ -270,27 +282,28 @@ if(isset($POST['supp_session']))
         </tbody>
     </table>
         <div class="d-md-flex justify-content-md-end">
-            <button type="button" class="btn btn-outline-success" id="btnConfirmer" onclick=redirectionLogin()>Confirmer</button>
+    <button type="button" class="btn btn-outline-success" id="btnConfirmer" onclick=redirectionLogin()>Confirmer</button>
 
-                <script>
-                    const bouton = document.getElementById('btnConfirmer');
-                bouton.addEventListener('click',()=>
-                    {
-                        let reponse = confirm("Voulez-vous vraiment confirmer cet achat ?");
-                        if(reponse == true)
-                        {
-                            window.location.href="login.php";
-                            formSupprimer.submit();
-                        }
-                        if(reponse == false)
-                        {
-                            alert("Achat annule.")
-                        }
-                    });
-                </script>
+        <script>
+            const bouton = document.getElementById('btnConfirmer');
+        bouton.addEventListener('click',()=>
+            {
+                let reponse = confirm("Voulez-vous vraiment confirmer cet achat ?");
+                if(reponse == true)
+                {
+                    window.location.href="login.php";
+                    formSupprimer.submit();
+                }
+                if(reponse == false)
+                {
+                    alert("Achat annule.")
+                }
+            });
+        </script>
 
-            <form action="#Panier" method="POST">
-            <button type="submit" name="supp_session" class=" btn-delete btn btn-outline-danger ">Supprimer</button>
+    <form action="#Panier" method="POST">
+    <button type="submit" name="supp_session" class=" btn-delete btn btn-outline-danger ">Supprimer</button>
+
         </div>
     </section>
 
