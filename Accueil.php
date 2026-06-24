@@ -25,7 +25,14 @@ session_start();
  if(isset($_POST["Pharmacie"]) && !isset($_SESSION["Pharmacie"]))
     {
     $_SESSION["Pharmacie"]=[];
-    }      
+    }
+    if (isset($_POST['supp_session'])) {
+    session_unset();
+    session_destroy();
+    header("Location: #Panier"); 
+    exit;
+}         
+
 if(isset($_POST["Pharmacie"])!=null)
     {
         $n=$_POST["nom"];
@@ -45,7 +52,7 @@ if(isset($_POST["Pharmacie"])!=null)
     }  
 if(isset($_GET["remove"])) 
     {
-        $Fourniture=$_GET["remove"];
+        $Pharmacie=$_GET["remove"];
         unset($_SESSION["Pharmacie"][$Pharmacie]);
         $_SESSION["Pharmacie"]= array_values($_SESSION["Pharmacie"]);
         header("Location: Accueil.php#Panier");
@@ -55,7 +62,7 @@ if(isset($POST['supp_session']))
         unset($_SESSION['panier']);
         header("Location: Accueil.php");
         exit();
-    } 
+    }    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -86,7 +93,7 @@ if(isset($POST['supp_session']))
 
     <nav class="navbar navbar-expand-lg bg-body-primary dropdown cf"   id="primary-nav" >
       <div class="container-fluid bg-success text-light">
-            <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+            <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">Pharmacie
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
@@ -293,10 +300,12 @@ if(isset($POST['supp_session']))
         }
     });
 </script>
+
 <form action="#Panier" method="POST">
     <button type="submit" name="supp_session" class=" btn-delete btn btn-outline-danger ">
         Supprimer 
     </button>
+
 </div>
     </section>
 
@@ -314,22 +323,24 @@ if(isset($POST['supp_session']))
     </section>
 
     <section class="contact" id="Contact">
+        <div class="section-heading">
+                      <span>Localisation</span>
+        </div>              
+        <div id="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.721360494536!2d47.523325975201026!3d-18.899438582269166!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x21f080ab6e9d0f99%3A0xedc4b79bfb6e6d1f!2s0!5e0!3m2!1sfr!2smg!4v1782289227067!5m2!1sfr!2smg" width="100%" height="500px" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>
          <div class="container">
             <div class="col-md-10 col-md-offset-1">
                 <div class="wrapper">
                   <div class="section-heading">
-                      <span>Pharmacie</span>
-                      <h2>Contact Nous</h2>
-                  </div>
-                  <!-- Modal button -->
-                 <a href="https://l.instagram.com/?u=https%3A%2F%2Flinktr.ee%2FPharmactivDistribution&e=AUB5rNgtOg0ZxvFCHbOH3-p3uKjiJ5q51AmvkMgsjApAFTm1Zgnoo19BFLT9uatZPoM8v0MnT9nR_SeIOkPdnkCQB8nX_3NroqTI2rzwxT8sC_foNTUfNgKtrHflQGJLDwNiGR1SyWc-D6XlE87c6w" alt=""> <button id="modBtn" class="modal-btn">Talk to us</button></a>
-                </div>
+                      <h2>Adresse : N2 - Arabe Lénine, Ankadifotsy, Antananarivo</h2>
+                      <h2>Téléphones : 020 22 222 07 ou 034 22 222 07 (autres contacts disponibles : 033 85 991 20 / 032 24 705 51)</h2>
     </section>    
     <br>
     <br>
     <nav class="navbar navbar-expand-lg bg-body-primary dropdown cf"   id="primary-nav" >
       <div class="container-fluid bg-success text-light">
-            <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">
+            <img src="Logo.PNG"  class="rounded-circle" alt="Logo" width="60" height="50" class="d-inline-block align-text-top">Pharmacie
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
