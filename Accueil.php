@@ -145,12 +145,12 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                       <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $ca->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $ca->Prix?>">
 
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>
                                 </div>
                             </a>    
                             <?php } ?>
@@ -172,12 +172,12 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $f->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $f->Prix?>">
 
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>
                                 </div>
                             </a>    
                             <?php } ?>
@@ -199,12 +199,12 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $cr->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $cr->Prix?>">
 
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>
                                 </div>
                             </a>    
                             <?php } ?>
@@ -226,12 +226,12 @@ if(isset($POST['supp_session']))
                                         </strong>
                                     </p>
                                     <form method="POST">
-                        Quantite:<input type="number"  name="Pharmacie">
-                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
-                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
+                                        Quantite:<input type="number"  name="Pharmacie">
+                                        <input type="hidden" name="nom" value="<?php echo $s->Nom?>">
+                                        <input type="hidden" name="prix" value="<?php echo $s->Prix?>">
 
-                         <button type="submit" class="btn btn-outline-success ">Acheter</button> 
-                    </form>
+                                        <button type="submit" class="btn btn-outline-success ">Acheter</button> 
+                                    </form>
                                 </div>
                             </a>    
                             <?php } ?>
@@ -253,11 +253,11 @@ if(isset($POST['supp_session']))
     <table class="table">
         <thead>
             <tr class="table-light">
-            <th scope="col" class="text-success">Designation</th>
-            <th scope="col" class="text-success">Quantite</th>
-            <th scope="col" class="text-success">Prix Unitaire</th>
-            <th scope="col" class="text-success">Prix Total</th>
-            <th scope="col" class="text-success">Action</th>
+                <th scope="col" class="text-success">Designation</th>
+                <th scope="col" class="text-success">Quantite</th>
+                <th scope="col" class="text-success">Prix Unitaire</th>
+                <th scope="col" class="text-success">Prix Total</th>
+                <th scope="col" class="text-success">Action</th>
             </tr>
         </thead>
         <tbody>
@@ -266,18 +266,18 @@ if(isset($POST['supp_session']))
             foreach(($_SESSION["Pharmacie"] ?? []) as $Pharmacie=>$ph) {  $total+=(float)$ph["PT"] ;   ?>
                 <tr>
                 <th scope="row" class="table-light"><?php echo $ph["nom"] ?></th>
-                <td class="table-light"><?php echo $ph["quantite"]?></td>
-                <td class="table-light"><?php echo $ph["prix"] ?></td>
-                <td class="table-light"><?php echo $ph["PT"] ?></td>
-                <td class="table-light"><a href="?remove=<?php echo $Pharmacie;?>"><button type="button" class="btn btn-outline-danger ">Supprimer</button></td>
+                    <td class="table-light"><?php echo $ph["quantite"]?></td>
+                    <td class="table-light"><?php echo $ph["prix"] ?></td>
+                    <td class="table-light"><?php echo $ph["PT"] ?></td>
+                    <td class="table-light"><a href="?remove=<?php echo $Pharmacie;?>"><button type="button" class="btn btn-outline-danger ">Supprimer</button></td>
                 </tr>
             <?php }?>
                 <tr>
-                <th scope="row" class="table-light"></th>
-                <td class="table-light"></td>
-                <td class="table-light text-success"><strong>Net=</strong> </td>
-                <td class="table-light"><?php echo $total?></td>
-                <td class="table-light"></td>
+                    <th scope="row" class="table-light"></th>
+                    <td class="table-light"></td>
+                    <td class="table-light text-success"><strong>Net=</strong> </td>
+                    <td class="table-light"><?php echo $total?></td>
+                    <td class="table-light"></td>
                 </tr>
         </tbody>
     </table>
